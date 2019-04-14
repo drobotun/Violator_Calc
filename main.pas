@@ -110,7 +110,7 @@ function GetCompetence : integer;
 begin
   if (GetIQCompetence + GetSysCompetence) > 5 then Result := CHigh;
   if ((GetIQCompetence + GetSysCompetence) < 6) and
-    ((GetIQCompetence + GetSysCompetence) <2) then Result := CMiddle;
+    ((GetIQCompetence + GetSysCompetence) > 2) then Result := CMiddle;
   if (GetIQCompetence + GetSysCompetence) < 3 then Result := CLow;
 end;
 
@@ -214,44 +214,44 @@ begin
   if GetMotiveStr = 'H' then
     begin
       if GetBasePotentialNoMotive = 'N' then
-        Result := 'Îòñóòñòâóåò';
+        Result := 'ÃŽÃ²Ã±Ã³Ã²Ã±Ã²Ã¢Ã³Ã¥Ã²';
       if GetBasePotentialNoMotive = 'L' then
-        Result := 'Ñðåäíèé';
+        Result := 'Ã‘Ã°Ã¥Ã¤Ã­Ã¨Ã©';
       if GetBasePotentialNoMotive = 'M' then
-        Result := 'Âûñîêèé';
+        Result := 'Ã‚Ã»Ã±Ã®ÃªÃ¨Ã©';
       if GetBasePotentialNoMotive = 'H' then
-        Result := 'Âûñîêèé';
+        Result := 'Ã‚Ã»Ã±Ã®ÃªÃ¨Ã©';
     end;
   if GetMotiveStr = 'M' then
     begin
       if GetBasePotentialNoMotive = 'N' then
-        Result := 'Îòñóòñòâóåò';
+        Result := 'ÃŽÃ²Ã±Ã³Ã²Ã±Ã²Ã¢Ã³Ã¥Ã²';
       if GetBasePotentialNoMotive = 'L' then
-        Result := 'Íèçêèé';
+        Result := 'ÃÃ¨Ã§ÃªÃ¨Ã©';
       if GetBasePotentialNoMotive = 'M' then
-        Result := 'Ñðåäíèé';
+        Result := 'Ã‘Ã°Ã¥Ã¤Ã­Ã¨Ã©';
       if GetBasePotentialNoMotive = 'H' then
-        Result := 'Âûñîêèé';
+        Result := 'Ã‚Ã»Ã±Ã®ÃªÃ¨Ã©';
     end;
   if GetMotiveStr = 'N' then
     begin
       if GetBasePotentialNoMotive = 'N' then
-        Result := 'Îòñóòñòâóåò';
+        Result := 'ÃŽÃ²Ã±Ã³Ã²Ã±Ã²Ã¢Ã³Ã¥Ã²';
       if GetBasePotentialNoMotive = 'L' then
-        Result := 'Íèçêèé';
+        Result := 'ÃÃ¨Ã§ÃªÃ¨Ã©';
       if GetBasePotentialNoMotive = 'M' then
-        Result := 'Íèçêèé';
+        Result := 'ÃÃ¨Ã§ÃªÃ¨Ã©';
       if GetBasePotentialNoMotive = 'H' then
-        Result := 'Íèçêèé';
+        Result := 'ÃÃ¨Ã§ÃªÃ¨Ã©';
     end;
 end;
 
 function GetBasePotential : integer;
 begin
-  if GetBasePotentialStr = 'Îòñóòñòâóåò' then Result := 0;
-  if GetBasePotentialStr = 'Íèçêèé' then Result := 1;
-  if GetBasePotentialStr = 'Ñðåäíèé' then Result := 3;
-  if GetBasePotentialStr = 'Âûñîêèé' then Result := 5;
+  if GetBasePotentialStr = 'ÃŽÃ²Ã±Ã³Ã²Ã±Ã²Ã¢Ã³Ã¥Ã²' then Result := 0;
+  if GetBasePotentialStr = 'ÃÃ¨Ã§ÃªÃ¨Ã©' then Result := 1;
+  if GetBasePotentialStr = 'Ã‘Ã°Ã¥Ã¤Ã­Ã¨Ã©' then Result := 3;
+  if GetBasePotentialStr = 'Ã‚Ã»Ã±Ã®ÃªÃ¨Ã©' then Result := 5;
 end;
 
 function GetBasePotentialString : string;
