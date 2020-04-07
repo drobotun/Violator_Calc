@@ -10,7 +10,7 @@ The package implements various cryptographic functions defined in the State stan
 - **gosthmac**: The module implements the functions of calculating the HMAC message authentication code in accordance with R 50.1.113-2016.
 - **gostpbkdf**: The module implements the password-based key derivation function in accordance with R 50.1.111-2016.
 
-The **gosthash** module.
+The *gosthash* module.
 ----------------------
 
 Usage:
